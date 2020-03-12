@@ -3,6 +3,52 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.6...@spectrum-css/statuslight@3.0.0-beta.0)
+
+### ✨ Features
+
+* make StatusLight support RTL ([e0d398b](https://github.com/adobe/spectrum-css/commit/e0d398b))
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.5...@spectrum-css/statuslight@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/statuslight
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.4...@spectrum-css/statuslight@2.0.5)
+
+### 🐛 Bug fixes
+
+* [Accessibility] StatusLight dot disappears in High Contrast Mode, fixes [#508](https://github.com/adobe/spectrum-css/issues/508) ([#509](https://github.com/adobe/spectrum-css/issues/509)) ([0909251](https://github.com/adobe/spectrum-css/commit/0909251))
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.3...@spectrum-css/statuslight@2.0.4)
+
+### 🐛 Bug fixes
+
+* align labels for Radio/Checkbox/Switch/Status light  ([#458](https://github.com/adobe/spectrum-css/issues/458)) ([616a1b4](https://github.com/adobe/spectrum-css/commit/616a1b4)), closes [#406](https://github.com/adobe/spectrum-css/issues/406) [#402](https://github.com/adobe/spectrum-css/issues/402) [#403](https://github.com/adobe/spectrum-css/issues/403) [#426](https://github.com/adobe/spectrum-css/issues/426)
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/statuslight@2.0.2...@spectrum-css/statuslight@2.0.3)

@@ -13,23 +13,26 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-textfield-padding-top: 3px;
-  --spectrum-textfield-padding-bottom: 5px;
-
-  /* Todo fix in DNA */
-  --spectrum-textfield-quiet-border-radius: 0;
-
   --spectrum-textfield-quiet-invalid-background-position: 100% 50%;
 
-  --spectrum-textfield-multiline-height: auto;
-  --spectrum-textfield-multiline-min-height: var(--spectrum-global-dimension-size-700);
+  --spectrum-textarea-height: auto;
 
-  --spectrum-textfield-multiline-padding-x: var(--spectrum-textfield-padding-x);
-  --spectrum-textfield-multiline-padding-top: var(--spectrum-textfield-padding-top);
-  --spectrum-textfield-multiline-padding-bottom: var(--spectrum-textfield-padding-bottom);
+  /* Todo: fix in DNA */
+  --spectrum-textarea-min-height: var(--spectrum-global-dimension-size-700);
+
+  /* Remove border width from padding */
+  --spectrum-textfield-padding-top-adjusted: calc(var(--spectrum-textfield-padding-top) - var(--spectrum-textfield-border-size));
+
+  /* Hack: we need 1px less padding here for text to fix properly */
+  --spectrum-textfield-padding-bottom-adjusted: calc(var(--spectrum-textfield-padding-bottom) - var(--spectrum-textfield-border-size) - 1px);
+  --spectrum-textfield-padding-x-adjusted: calc(var(--spectrum-textfield-padding-x) - var(--spectrum-textfield-border-size));
+
+  --spectrum-textarea-padding-top-adjusted: calc(var(--spectrum-textarea-padding-top) - var(--spectrum-textarea-border-size));
+  --spectrum-textarea-padding-bottom-adjusted: calc(var(--spectrum-textarea-padding-bottom) - var(--spectrum-textarea-border-size));
+  --spectrum-textarea-padding-x-adjusted: calc(var(--spectrum-textarea-padding-x) - var(--spectrum-textarea-border-size));
 
   /* Todo: DNA uses incorrect font family "Adobe Clean" */;
-  --spectrum-textfield-text-font-family-fixed: adobe-clean, Helvetica, Arial, sans-serif;
+  --spectrum-textfield-text-font-family: var(--spectrum-font-family-base);
 }
 
 .spectrum-Textfield {
@@ -39,13 +42,14 @@ governing permissions and limitations under the License.
   border-radius: var(--spectrum-textfield-border-radius);
 
   /* Apply padding by default to center text, giving consistency between input and textfield */
-  padding: var(--spectrum-textfield-padding-top) var(--spectrum-textfield-padding-x) var(--spectrum-textfield-padding-bottom) var(--spectrum-textfield-padding-x);
+  padding-block: var(--spectrum-textfield-padding-top-adjusted) var(--spectrum-textfield-padding-bottom-adjusted);
+  padding-inline: var(--spectrum-textfield-padding-x-adjusted) var(--spectrum-textfield-padding-x-adjusted);
   /* Use padding instead of text-indent because text-indent does not left align the text in Edge browser  */
   text-indent: 0;
 
-  min-width: var(--spectrum-textfield-min-width);
-  height: var(--spectrum-textfield-height);
-  width: var(--spectrum-component-single-line-width);
+  min-inline-size: var(--spectrum-textfield-min-width);
+  block-size: var(--spectrum-textfield-height);
+  inline-size: var(--spectrum-component-single-line-width);
 
   vertical-align: top; /* used to align them correctly in forms. */
 
@@ -56,7 +60,7 @@ governing permissions and limitations under the License.
   overflow: visible;
 
   /* Change the input font styles in all browsers */
-  font-family: var(--spectrum-textfield-text-font-family-fixed);
+  font-family: var(--spectrum-textfield-text-font-family);
   font-size: var(--spectrum-textfield-text-size);
   line-height: var(--spectrum-textfield-text-line-height);
   text-overflow: ellipsis;
@@ -122,8 +126,8 @@ governing permissions and limitations under the License.
   /* Remove the native clear button in IE */
   /* http://stackoverflow.com/questions/14007655/remove-ie10s-clear-field-x-button-on-certain-inputs */
   &::-ms-clear {
-    width: 0;
-    height: 0;
+    inline-size: 0;
+    block-size: 0;
   }
 
   /* removes the native spin buttons */
@@ -148,39 +152,42 @@ governing permissions and limitations under the License.
   &.is-invalid,
   &:invalid {
     background-size: var(--spectrum-icon-alert-medium-width) var(--spectrum-icon-alert-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
-    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
+    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2) - var(--spectrum-textfield-quiet-border-size));
+    padding-inline-end: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-alert-medium-width) + var(--spectrum-textfield-icon-margin-left));
+
+    [dir="rtl"] & {
+      background-position: calc(var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-alert-medium-height) / 2));
+    }
   }
 
   &.is-valid {
     background-size: var(--spectrum-icon-checkmark-medium-width) var(--spectrum-icon-checkmark-medium-width);
-    background-position: calc(100% - var(--spectrum-textfield-padding-x)) 50%;
-    padding-right: calc(var(--spectrum-textfield-padding-x) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
+    background-position: calc(100% - var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
+    padding-inline-end: calc(var(--spectrum-textfield-padding-x-adjusted) + var(--spectrum-icon-checkmark-medium-width) + var(--spectrum-textfield-icon-margin-left));
+
+    [dir="rtl"] & {
+      background-position: calc(var(--spectrum-textfield-padding-x-adjusted)) calc(calc(var(--spectrum-textfield-height) / 2) - calc(var(--spectrum-icon-checkmark-medium-height) / 2));
+    }
   }
 }
 
 .spectrum-Textfield--multiline {
-  height: var(--spectrum-textfield-multiline-height);
-  min-height: var(--spectrum-textfield-multiline-min-height);
-  padding: var(--spectrum-textfield-multiline-padding-top) var(--spectrum-textfield-multiline-padding-x) var(--spectrum-textfield-multiline-padding-bottom) var(--spectrum-textfield-multiline-padding-x);
+  block-size: var(--spectrum-textarea-height);
+  min-block-size: var(--spectrum-textarea-min-height);
+  padding-block: var(--spectrum-textarea-padding-top-adjusted) var(--spectrum-textarea-padding-bottom-adjusted);
+  padding-inline: var(--spectrum-textarea-padding-x-adjusted) var(--spectrum-textarea-padding-x-adjusted);
 
   /* Remove the default vertical scrollbar for textarea in IE. */
   overflow: auto;
-
-  &.is-invalid,
-  &:invalid,
-  &.is-valid {
-    background-position: calc(100% - calc(var(--spectrum-textfield-icon-size) / 2)) calc(100% - calc(var(--spectrum-textfield-icon-size) / 2));
-  }
 }
 
 .spectrum-Textfield--quiet {
   border-radius: var(--spectrum-textfield-quiet-border-radius);
-  border-width: 0 0 var(--spectrum-textfield-quiet-border-size) 0;
+  border-width: logical 0 0 var(--spectrum-textfield-quiet-border-size) 0;
 
   /* removes the side padding to align the text properly */
-  padding-left: var(--spectrum-textfield-quiet-padding-x);
-  padding-right: var(--spectrum-textfield-quiet-padding-x);
+  padding-inline-start: var(--spectrum-textfield-quiet-padding-x);
+  padding-inline-end: var(--spectrum-textfield-quiet-padding-x);
 
   /* Treat all quiet inputs and textareas the same */
   resize: none;
@@ -193,7 +200,7 @@ governing permissions and limitations under the License.
   }
 
   &.spectrum-Textfield--multiline {
-    height: var(--spectrum-textfield-height);
-    min-height: var(--spectrum-textfield-height);
+    block-size: var(--spectrum-textfield-height);
+    min-block-size: var(--spectrum-textfield-height);
   }
 }

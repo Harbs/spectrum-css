@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0-beta.0"></a>
+# 2.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.1.1...@spectrum-css/site@2.0.0-beta.0)
+
+### ✨ Features
+
+* make Site layout respect RTL ([77b18df](https://github.com/adobe/spectrum-css/commit/77b18df))
+
+
+
+
+
+<a name="1.1.1"></a>
+## 1.1.1
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.1.0...@spectrum-css/site@1.1.1)
+
+**Note:** Version bump only for package @spectrum-css/site
+
+
+
+
+
+<a name="1.1.0"></a>
+# 1.1.0
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.0.3...@spectrum-css/site@1.1.0)
+
+### ✨ Features
+
+* adding t-shirt sized typography, fixes [#210](https://github.com/adobe/spectrum-css/issues/210), closes [#416](https://github.com/adobe/spectrum-css/issues/416) ([#408](https://github.com/adobe/spectrum-css/issues/408)) ([3921bcb](https://github.com/adobe/spectrum-css/commit/3921bcb)), closes [#523](https://github.com/adobe/spectrum-css/issues/523)
+
+
+
+
+
 <a name="1.0.3"></a>
 ## 1.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/site@1.0.2...@spectrum-css/site@1.0.3)

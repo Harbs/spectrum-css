@@ -13,7 +13,9 @@ governing permissions and limitations under the License.
 @import '../commons/index.css';
 
 :root {
-  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-75);
+  /* Hardcoded for wrapping study.
+  Will be a DNA token in https://jira.corp.adobe.com/browse/SDS-4466 */
+  --spectrum-statuslight-padding-y: var(--spectrum-global-dimension-size-65);
 
   /* Override line-height to fix Firefox */
   --spectrum-statuslight-text-line-height: 1.44;
@@ -24,12 +26,13 @@ governing permissions and limitations under the License.
 }
 
 .spectrum-StatusLight {
-  min-height: var(--spectrum-statuslight-height);
+  min-block-size: var(--spectrum-statuslight-height);
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 
-  padding: var(--spectrum-statuslight-padding-top) 0 var(--spectrum-statuslight-padding-bottom) 0;
+  padding-block: var(--spectrum-statuslight-padding-top) var(--spectrum-statuslight-padding-bottom);
+  padding-inline: 0;
   box-sizing: border-box;
 
   font-size: var(--spectrum-statuslight-text-size);
@@ -41,12 +44,17 @@ governing permissions and limitations under the License.
     flex-grow: 0;
     flex-shrink: 0;
     display: inline-block;
-    width: var(--spectrum-statuslight-dot-size);
-    height: var(--spectrum-statuslight-dot-size);
+    inline-size: var(--spectrum-statuslight-dot-size);
+    block-size: var(--spectrum-statuslight-dot-size);
     border-radius: 50%;
 
     /* margin on the dog is the opposite of the padding in order to align the dot as if the padding hack was not present */
-    margin: var(--spectrum-statuslight-padding-bottom) var(--spectrum-statuslight-text-gap) var(--spectrum-statuslight-padding-top) var(--spectrum-statuslight-text-gap);
+    margin-block: var(--spectrum-statuslight-padding-bottom) var(--spectrum-statuslight-padding-top);
+    margin-inline: var(--spectrum-statuslight-text-gap) var(--spectrum-statuslight-text-gap);
+
+    /* support high contrast/forced-color-adjust mode for dot */
+    -ms-high-contrast-adjust: none;
+    forced-color-adjust: none;
   }
 }
 
