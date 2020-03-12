@@ -44,7 +44,7 @@
   let status = dnaStatusTranslation[component.dnaStatus] || component.dnaStatus;
 
 doctype html
-html(lang='en-US').spectrum.spectrum--light.spectrum--medium
+html(lang='en-US' dir="ltr").spectrum.spectrum--light.spectrum--medium
   head
     title #{component.name} - Spectrum CSS
 
@@ -109,9 +109,27 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                         span.spectrum-Menu-itemLabel Large
                         svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
                           use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
+              div.spectrum-CSS-switcherContainer
+                label.spectrum-FieldLabel.spectrum-FieldLabel--left(for='switcher-theme') Direction
+
+                .spectrum-Dropdown.spectrum-Dropdown--quiet(id="switcher-direction")
+                  button.spectrum-FieldButton.spectrum-FieldButton--quiet.spectrum-Dropdown-trigger(aria-haspopup="true")
+                    span.spectrum-Dropdown-label LTR
+                    svg.spectrum-Icon.spectrum-UIIcon-ChevronDownMedium.spectrum-Dropdown-icon(focusable="false" aria-hidden="true")
+                      use(xlink:href="#spectrum-css-icon-ChevronDownMedium")
+                  .spectrum-Popover.spectrum-Popover--bottom.spectrum-Dropdown-popover.spectrum-Dropdown-popover--quiet
+                    ul.spectrum-Menu(role='listbox')
+                      li.spectrum-Menu-item.is-selected(role='option' aria-selected='true' tabindex='0' value="ltr")
+                        span.spectrum-Menu-itemLabel LTR
+                        svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                          use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
+                      li.spectrum-Menu-item(role='option' tabindex='0' value="rtl")
+                        span.spectrum-Menu-itemLabel RTL
+                        svg.spectrum-Icon.spectrum-UIIcon-CheckmarkMedium.spectrum-Menu-checkmark.spectrum-Menu-itemIcon(focusable='false' aria-hidden='true')
+                          use(xlink:href='#spectrum-css-icon-CheckmarkMedium')
 
             header(id=component.slug).spectrum-CSSComponent-heading
-              h2.spectrum-CSSComponent-title.spectrum-Article.spectrum-Heading1--display
+              h1.spectrum-CSSComponent-title.spectrum-Heading.spectrum-Heading--XXXL.spectrum-Heading--serif
                 a(href=`#${component.slug}`).spectrum-BigSubtleLink #{component.name}
 
             table.spectrum-CSSComponent-detailsTable
@@ -124,15 +142,16 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
                 td= releaseDate
               tr
                 th.spectrum-Body--secondary Current version
-                td #{pkg.name}@#{pkg.version}
+                td
+                  bdo(dir="ltr") #{pkg.name}@#{pkg.version}
             if component.details
               tr
                 th Details
-                tr!= util.markdown.toHTML(component.details)
+                tr!= util.markdown.render(component.details)
 
             div.spectrum-CSSComponent-resources
-              //-
-                a.spectrum-Card.spectrum-Card--small.spectrum-Card--horizontal(href=`${spectrumURL || 'https://spectrum.corp.adobe.com/'+pkg.name.split('/').pop()}` target="_blank")
+              if component.SpectrumSiteSlug
+                a.spectrum-Card.spectrum-Card--small.spectrum-Card--horizontal(href=`${component.SpectrumSiteSlug}` target="_blank")
                   .spectrum-Card-preview.spectrum-CSSComponent-resource--adobe
                     svg(class="spectrum-Icon spectrum-Icon--sizeL" viewBox="0 0 36 36" focusable="false" aria-hidden="true" aria-label="AdobeLogo")
                       path(d="M22.175 4H34v28L22.175 4zm-8.336 0H2v28L13.839 4zm4.165 10.317l7.538 17.682h-4.939l-2.258-5.632h-5.517l5.176-12.05z")
@@ -171,19 +190,23 @@ html(lang='en-US').spectrum.spectrum--light.spectrum--medium
 
             if component.description
               header.spectrum-CSSComponent-sectionHeading(id="usage")
-                h4.spectrum-Heading3
+                h2.spectrum-Heading.spectrum-Heading--M
                   a(href="#usage").spectrum-BigSubtleLink Usage notes
                 hr.spectrum-Rule.spectrum-Rule--large
               section.spectrum-CSSComponent-description
-                div.spectrum-Body3!= util.markdown.toHTML(component.description)
+                div.spectrum-Body.spectrum-Body--M!= util.markdown.render(component.description)
 
             if examples.length
               header.spectrum-CSSComponent-sectionHeading(id="variants")
-                h4.spectrum-Heading3
-                  a(href="#variants").spectrum-BigSubtleLink Variants
+                h2.spectrum-Heading.spectrum-Heading--M
+                  a(href="#variants").spectrum-BigSubtleLink=`${component.examplesHeading ? component.examplesHeading : 'Variants'}`
                 hr.spectrum-Rule.spectrum-Rule--large
               each example in examples
                 include ../includes/example.pug
+
+            if component.sections
+              each section in component.sections
+                include ../includes/section.pug
 
             include ../includes/footer.pug
 

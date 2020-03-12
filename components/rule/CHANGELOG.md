@@ -3,6 +3,51 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@2.0.6...@spectrum-css/rule@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Rule support RTL ([0f15f2d](https://github.com/adobe/spectrum-css/commit/0f15f2d))
+
+
+
+
+
+<a name="2.0.6"></a>
+## 2.0.6
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@2.0.5...@spectrum-css/rule@2.0.6)
+
+**Note:** Version bump only for package @spectrum-css/rule
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@2.0.4...@spectrum-css/rule@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/rule
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2020-01-23 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@2.0.3...@spectrum-css/rule@2.0.4)
+
+### 🐛 Bug fixes
+
+* make vertical Rule's height a variable, fixes [#455](https://github.com/adobe/spectrum-css/issues/455) ([869c5b7](https://github.com/adobe/spectrum-css/commit/869c5b7))
+* update Rule token names, related [#425](https://github.com/adobe/spectrum-css/issues/425) ([b19a9b3](https://github.com/adobe/spectrum-css/commit/b19a9b3))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/rule@2.0.2...@spectrum-css/rule@2.0.3)

@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.0"></a>
+# 3.0.0-beta.0
+🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.5...@spectrum-css/dialog@3.0.0-beta.0)
+
+### ✨ Features
+
+* make Dialog support RTL ([3e7d5fc](https://github.com/adobe/spectrum-css/commit/3e7d5fc))
+
+
+
+
+
+<a name="2.0.5"></a>
+## 2.0.5
+🗓 2020-03-06 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.4...@spectrum-css/dialog@2.0.5)
+
+**Note:** Version bump only for package @spectrum-css/dialog
+
+
+
+
+
+<a name="2.0.4"></a>
+## 2.0.4
+🗓 2020-02-10 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.3...@spectrum-css/dialog@2.0.4)
+
+### 🐛 Bug fixes
+
+* correct error Dialog icon position and wrapping fixes [#492](https://github.com/adobe/spectrum-css/issues/492), fixes [#464](https://github.com/adobe/spectrum-css/issues/464) ([#520](https://github.com/adobe/spectrum-css/issues/520)) ([1d56fd9](https://github.com/adobe/spectrum-css/commit/1d56fd9))
+
+
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3
 🗓 2019-12-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/dialog@2.0.2...@spectrum-css/dialog@2.0.3)

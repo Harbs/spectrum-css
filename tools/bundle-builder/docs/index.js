@@ -49,7 +49,8 @@ let minimumDeps = [
   'illustratedmessage',
   'fieldlabel',
   'accordion',
-  'decoratedtextfield'
+  'decoratedtextfield',
+  'table'
 ];
 
 let templateData = {
@@ -249,6 +250,8 @@ function buildSite_getData() {
     nav.push({
       name: componentData.name,
       component: componentName,
+      hide: componentData.hide,
+      fastLoad: componentData.fastLoad,
       href: fileName,
       description: componentData.description
     });

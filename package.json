@@ -41,7 +41,7 @@
     "@adobe/spectrum-css-workflow-icons": "^1.0.0-beta.6",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "@spectrum-css/spectrum-css-vr-test-asset": "^1.1.0",
+    "@spectrum-css/spectrum-css-vr-test-assets-essential": "^1.0.3",
     "audit-ci": "^2.0.1",
     "backstopjs": "^4.3.2",
     "gulp": "^4.0.0",
@@ -50,14 +50,14 @@
     "lerna": "^3.16.4",
     "loadicons": "^1.0.0",
     "lunr": "^2.3.6",
-    "markdown": "^0.5.0",
+    "markdown-it": "^10.0.0",
     "prismjs": "^1.17.1",
     "semver": "^6.3.0",
     "through2": "^3.0.1"
   },
   "optionalDependencies": {
     "@a4u/a4u-collection-essential-ui-icons-release": "^4.1.0",
-    "@spectrum/spectrum-dna": "^5.21",
+    "@spectrum/spectrum-dna": "^5.23.0",
     "@spectrum/spectrum-icons": "^2.3.0"
   },
   "resolutions": {

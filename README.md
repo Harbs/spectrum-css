@@ -119,8 +119,17 @@ You can then use the icons in your app. Visit the [Spectrum workflow icon list](
 
 To take advantage of locale specific changes such as placeholders not italicizing Japanese, your application should specify a [`Content-Language` response header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language) or set the [`lang` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang).
 
+In addition, you must set the `dir` attribute for components to render correctly.
+
+For English, a left-to-right language:
 ```html
-<html lang="ja">
+<html lang="en" dir="ltr">
+```
+
+For Arabic, a right-to-left language:
+
+```html
+<html lang="ar" dir="rtl">
 ```
 
 ### Variable fallbacks
@@ -135,6 +144,7 @@ As such, **you do not need to include `dist/vars.css`** unless:
 When this file is imported, if in updated version of `@spectrum-css/vars` changed global variables (such as a global color, `--spectrum-global-color-gray-300`), you will get those updates. However, if the updated version of `@spectrum-css/vars` changed component-level variables (such as the height of a medium Rule, `--spectrum-rule-medium-height`), you will not get those updates. As such, this file can be used to lock-in the basic visual style of a component while still allowing for system-level updates.
 
 In most cases, this file will not be required, so you can safely ignore it. If you see unexpected visual changes creeping into components that you have not updated, `dist/vars.css` may correct them.
+
 
 ## Contributing
 
@@ -222,6 +232,8 @@ The following tasks are available:
 - `gulp packageLint` - Lint the `package.json` file for each component in the monorepo
 - `gulp readmeLint` - Generate a generic `README.md` file for each component in the monorepo
 
+
+
 ## Testing
 
 Visual regression testing is implemented by [BackstopJS](https://github.com/garris/BackstopJS). In order to avoid browser rendering inconsistent issue on different environments, the test needs to run inside of docker container.
@@ -255,6 +267,9 @@ Both `backstop:test` and `backstop:docker:test` accept arguments to customize yo
 - `npm run backstop:docker:test button` - Run test for `button` and its dependents components like action bar, toast etc with color stop as `light` and scale as `medium`.
 - `npm run backstop:docker:test themes=lightest,light scales=medium,large radio` - Run test for `radio` and its dependents components with color stop as `lightest` and `light` and scale as `medium` and `large`. It means that a single scenario will run 4 times.
 - `npm run backstop:docker:test themes=lightest,light,dark,darkest scales=medium,large` - Run test for all the components with all the color and scale combinations. It means that a single scenario will be run 8 times.
+
+___
+
 
 ## Releasing
 
