@@ -7,13 +7,17 @@
   {
     "label": "actionbar",
     "url": "actionbar.html",
-    "delay": 3000,
     "package": "@spectrum-css/actionbar"
   },
   {
     "label": "actionbutton",
     "url": "actionbutton.html",
     "package": "@spectrum-css/actionbutton"
+  },
+  {
+    "label": "actiongroup",
+    "url": "actiongroup.html",
+    "package": "@spectrum-css/actiongroup"
   },
   {
     "label": "actionmenu",
@@ -129,6 +133,31 @@
     "package": "@spectrum-css/coachmark"
   },
   {
+    "label": "colorarea",
+    "url": "colorarea.html",
+    "package": "@spectrum-css/colorarea"
+  },
+  {
+    "label": "colorhandle",
+    "url": "colorhandle.html",
+    "package": "@spectrum-css/colorhandle"
+  },
+  {
+    "label": "colorloupe",
+    "url": "colorloupe.html",
+    "package": "@spectrum-css/colorloupe"
+  },
+  {
+    "label": "colorslider",
+    "url": "colorslider.html",
+    "package": "@spectrum-css/colorslider"
+  },
+  {
+    "label": "colorwheel",
+    "url": "colorwheel.html",
+    "package": "@spectrum-css/colorwheel"
+  },
+  {
     "label": "combobox",
     "url": "combobox.html",
     "package": "@spectrum-css/combobox"
@@ -144,11 +173,6 @@
     "package": "@spectrum-css/datepicker"
   },
   {
-    "label": "decoratedtextfield",
-    "url": "decoratedtextfield.html",
-    "package": "@spectrum-css/decoratedtextfield"
-  },
-  {
     "label": "dial",
     "url": "dial.html",
     "package": "@spectrum-css/dial"
@@ -159,9 +183,9 @@
     "package": "@spectrum-css/dialog"
   },
   {
-    "label": "dropdown",
-    "url": "dropdown.html",
-    "package": "@spectrum-css/dropdown"
+    "label": "divider",
+    "url": "divider.html",
+    "package": "@spectrum-css/divider"
   },
   {
     "label": "dropindicator",
@@ -248,6 +272,11 @@
     "package": "@spectrum-css/miller"
   },
   {
+    "label": "modal",
+    "url": "modal.html",
+    "package": "@spectrum-css/modal"
+  },
+  {
     "label": "page",
     "url": "page.html",
     "package": "@spectrum-css/page"
@@ -268,6 +297,11 @@
     "package": "@spectrum-css/pagination"
   },
   {
+    "label": "picker",
+    "url": "picker.html",
+    "package": "@spectrum-css/picker"
+  },
+  {
     "label": "popover",
     "url": "popover.html",
     "package": "@spectrum-css/popover"
@@ -286,11 +320,6 @@
     "label": "rating",
     "url": "rating.html",
     "package": "@spectrum-css/rating"
-  },
-  {
-    "label": "rule",
-    "url": "rule.html",
-    "package": "@spectrum-css/rule"
   },
   {
     "label": "search",
@@ -363,6 +392,11 @@
     "package": "@spectrum-css/textfield"
   },
   {
+    "label": "thumbnail",
+    "url": "thumbnail.html",
+    "package": "@spectrum-css/thumbnail"
+  },
+  {
     "label": "toast",
     "url": "toast.html",
     "package": "@spectrum-css/toast"
@@ -373,14 +407,14 @@
     "package": "@spectrum-css/toggle"
   },
   {
-    "label": "tool",
-    "url": "tool.html",
-    "package": "@spectrum-css/tool"
-  },
-  {
     "label": "tooltip",
     "url": "tooltip.html",
     "package": "@spectrum-css/tooltip"
+  },
+  {
+    "label": "tray",
+    "url": "tray.html",
+    "package": "@spectrum-css/tray"
   },
   {
     "label": "treeview",
@@ -395,8 +429,7 @@
   {
     "label": "typography",
     "url": "typography.html",
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-body",
@@ -426,9 +459,7 @@
   {
     "label": "typography-international",
     "url": "typography-international.html",
-    "delay": 3000,
-    "package": "@spectrum-css/typography",
-    "misMatchThreshold": 0.11
+    "package": "@spectrum-css/typography"
   },
   {
     "label": "typography-international-deprecated",

@@ -8,6 +8,10 @@
     []
   ],
   [
+    "@spectrum-css/actiongroup",
+    []
+  ],
+  [
     "@spectrum-css/actionmenu",
     []
   ],
@@ -49,6 +53,7 @@
     "@spectrum-css/button",
     [
       "@spectrum-css/actionbar",
+      "@spectrum-css/actiongroup",
       "@spectrum-css/actionmenu",
       "@spectrum-css/alert",
       "@spectrum-css/breadcrumb",
@@ -58,12 +63,12 @@
       "@spectrum-css/coachmark",
       "@spectrum-css/cyclebutton",
       "@spectrum-css/dialog",
-      "@spectrum-css/dropdown",
+      "@spectrum-css/divider",
       "@spectrum-css/inputgroup",
       "@spectrum-css/pagination",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/quickaction",
-      "@spectrum-css/rule",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/splitbutton",
@@ -75,7 +80,8 @@
   [
     "@spectrum-css/buttongroup",
     [
-      "@spectrum-css/rule"
+      "@spectrum-css/dialog",
+      "@spectrum-css/divider"
     ]
   ],
   [
@@ -108,25 +114,48 @@
     []
   ],
   [
-    "@spectrum-css/cyclebutton",
+    "@spectrum-css/colorarea",
     []
   ],
   [
-    "@spectrum-css/decoratedtextfield",
+    "@spectrum-css/colorhandle",
+    [
+      "@spectrum-css/colorarea",
+      "@spectrum-css/colorslider",
+      "@spectrum-css/colorwheel"
+    ]
+  ],
+  [
+    "@spectrum-css/colorloupe",
+    [
+      "@spectrum-css/colorhandle"
+    ]
+  ],
+  [
+    "@spectrum-css/colorslider",
+    []
+  ],
+  [
+    "@spectrum-css/colorwheel",
+    []
+  ],
+  [
+    "@spectrum-css/cyclebutton",
     []
   ],
   [
     "@spectrum-css/dialog",
     [
-      "@spectrum-css/popover"
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
-    "@spectrum-css/dropdown",
+    "@spectrum-css/divider",
     [
-      "@spectrum-css/fieldlabel",
-      "@spectrum-css/searchwithin",
-      "@spectrum-css/tabs"
+      "@spectrum-css/dialog",
+      "@spectrum-css/popover",
+      "@spectrum-css/tray"
     ]
   ],
   [
@@ -143,9 +172,7 @@
   ],
   [
     "@spectrum-css/fieldlabel",
-    [
-      "@spectrum-css/decoratedtextfield"
-    ]
+    []
   ],
   [
     "@spectrum-css/illustratedmessage",
@@ -167,8 +194,8 @@
     "@spectrum-css/menu",
     [
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
       "@spectrum-css/inputgroup",
+      "@spectrum-css/picker",
       "@spectrum-css/popover",
       "@spectrum-css/tabs"
     ]
@@ -176,6 +203,13 @@
   [
     "@spectrum-css/miller",
     []
+  ],
+  [
+    "@spectrum-css/modal",
+    [
+      "@spectrum-css/dialog",
+      "@spectrum-css/tray"
+    ]
   ],
   [
     "@spectrum-css/page",
@@ -186,12 +220,20 @@
     []
   ],
   [
+    "@spectrum-css/picker",
+    [
+      "@spectrum-css/fieldlabel",
+      "@spectrum-css/searchwithin",
+      "@spectrum-css/tabs"
+    ]
+  ],
+  [
     "@spectrum-css/popover",
     [
       "@spectrum-css/actionbar",
       "@spectrum-css/actionmenu",
-      "@spectrum-css/dropdown",
-      "@spectrum-css/inputgroup"
+      "@spectrum-css/inputgroup",
+      "@spectrum-css/picker"
     ]
   ],
   [
@@ -209,10 +251,6 @@
   ],
   [
     "@spectrum-css/rating",
-    []
-  ],
-  [
-    "@spectrum-css/rule",
     []
   ],
   [
@@ -272,13 +310,18 @@
   [
     "@spectrum-css/textfield",
     [
-      "@spectrum-css/decoratedtextfield",
       "@spectrum-css/fieldlabel",
       "@spectrum-css/inputgroup",
       "@spectrum-css/pagination",
       "@spectrum-css/search",
       "@spectrum-css/searchwithin",
       "@spectrum-css/stepper"
+    ]
+  ],
+  [
+    "@spectrum-css/thumbnail",
+    [
+      "@spectrum-css/treeview"
     ]
   ],
   [
@@ -294,6 +337,10 @@
     [
       "@spectrum-css/steplist"
     ]
+  ],
+  [
+    "@spectrum-css/tray",
+    []
   ],
   [
     "@spectrum-css/treeview",

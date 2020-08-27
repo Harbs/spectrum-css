@@ -3,6 +3,55 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0-beta.4"></a>
+# 3.0.0-beta.4
+🗓 2020-06-19 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.3...@spectrum-css/fieldlabel@3.0.0-beta.4)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="3.0.0-beta.3"></a>
+# 3.0.0-beta.3
+🗓 2020-05-14 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.2...@spectrum-css/fieldlabel@3.0.0-beta.3)
+
+### 🐛 Bug fixes
+
+* **fieldlabel:** use unique id for each input ([#677](https://github.com/adobe/spectrum-css/issues/677)) ([b617d0e](https://github.com/adobe/spectrum-css/commit/b617d0e))
+
+
+
+
+
+<a name="3.0.0-beta.2"></a>
+# 3.0.0-beta.2
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.1...@spectrum-css/fieldlabel@3.0.0-beta.2)
+
+**Note:** Version bump only for package @spectrum-css/fieldlabel
+
+
+
+
+
+<a name="3.0.0-beta.1"></a>
+# 3.0.0-beta.1
+🗓 2020-03-12 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@3.0.0-beta.0...@spectrum-css/fieldlabel@3.0.0-beta.1)
+
+### ✨ Features
+
+* make Form/FieldLabel use new Textfield markup ([bb404fb](https://github.com/adobe/spectrum-css/commit/bb404fb))
+
+
+### 🛑 BREAKING CHANGES
+
+* migrated to next Textfield markup
+
+
+
+
+
 <a name="3.0.0-beta.0"></a>
 # 3.0.0-beta.0
 🗓 2020-03-09 • 📝 [Commits](https://github.com/adobe/spectrum-css/compare/@spectrum-css/fieldlabel@2.0.6...@spectrum-css/fieldlabel@3.0.0-beta.0)
