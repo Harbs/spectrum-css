@@ -34,6 +34,12 @@ governing permissions and limitations under the License.
   */
   clip-path: inset(-30px -30px);
 
+  .spectrum-Dialog-header,
+  .spectrum-Dialog-footer,
+  .spectrum-Dialog-wrapper {
+    background-color: transparent;
+  }
+  
   .spectrum-Popover-tip {
     .spectrum-Popover-tip-triangle {
       fill: var(--spectrum-popover-background-color);
